@@ -1,0 +1,36 @@
+{
+  "name": "stitch-audio",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.33.0",
+  "description": "CLI to stitch audio files into a single MP3 using ffmpeg",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gglennd/stitch-audio.git"
+  },
+  "bin": {
+    "stitch-audio": "dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint .",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.0.0",
+    "@types/node": "^25.9.3",
+    "eslint": "^10.3.0",
+    "eslint-plugin-format": "^2.0.1",
+    "typescript": "^6.0.3"
+  }
+}
